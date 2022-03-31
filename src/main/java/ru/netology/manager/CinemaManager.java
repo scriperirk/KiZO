@@ -1,13 +1,12 @@
 package ru.netology.manager;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import ru.netology.domain.CinemaData;
 
 import static java.lang.System.arraycopy;
 
 @Data
-@NoArgsConstructor
+//@NoArgsConstructor
 public class CinemaManager {
     private int quantityCinema = 5; //завел максимум
 
