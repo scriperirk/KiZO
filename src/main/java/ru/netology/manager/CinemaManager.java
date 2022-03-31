@@ -1,7 +1,8 @@
-package ru.netology.domain;
+package ru.netology.manager;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.netology.domain.CinemaData;
 
 import static java.lang.System.arraycopy;
 
