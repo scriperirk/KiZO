@@ -1,13 +1,14 @@
 package ru.netology.domain;
 
 import org.junit.jupiter.api.Test;
+import ru.netology.manager.CinemaManager;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class CinemaManagerTest {
 
     CinemaManager manager = new CinemaManager();
-    CinemaData name = new CinemaData(9, "For all Mankind", "serial");
+    CinemaData name = new CinemaData(9, "Гоблин", "сериал");
 
     @Test
     public void addFilm() {
@@ -18,7 +19,8 @@ class CinemaManagerTest {
                 new CinemaData(4, "Джентльмены", "боевик"),
                 new CinemaData(5, "Человек-невидимка", "ужасы"),
                 new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
-                new CinemaData(7, "Номер один", "комедия")};
+                new CinemaData(7, "Номер один", "комедия"),
+                new CinemaData(8, "Гоблин", "сериал")};
         assertArrayEquals(expected, actual);
     }
 
