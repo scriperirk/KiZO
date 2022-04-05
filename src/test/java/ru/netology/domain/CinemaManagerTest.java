@@ -21,7 +21,7 @@ class CinemaManagerTest {
                 new CinemaData(5, "Человек-невидимка", "ужасы"),
                 new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
                 new CinemaData(7, "Номер один", "комедия"),
-                new CinemaData(8, "Гоблин", "сериал")};
+                new CinemaData(9, "Гоблин", "сериал")};
         assertArrayEquals(expected, actual);
     }
 
@@ -39,7 +39,7 @@ class CinemaManagerTest {
                 new CinemaData(5, "Человек-невидимка", "ужасы"),
                 new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
                 new CinemaData(7, "Номер один", "комедия"),
-                new CinemaData(8, "Гоблин", "сериал")};
+                new CinemaData(9, "Гоблин", "сериал")};
         assertArrayEquals(expected, actual);
     }
 }
