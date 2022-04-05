@@ -43,7 +43,7 @@ public class CinemaManager {
     }
 
     public CinemaData[] addFilm(CinemaData name) {
-        repo.save(name);
-        return new CinemaData[0];
+        CinemaData[] all = repo.findAll();
+        return all;
     }
 }

@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class CinemaManagerTest {
 
+    CinemaDataRepozitory repo = new CinemaDataRepozitory();
+
     @Test
     public void addFilm() {
 
@@ -45,12 +47,7 @@ class CinemaManagerTest {
     }
 
     @Test
-    public void addFilmRepo() {
-
-        CinemaManager manager2 = new CinemaManager(new CinemaDataRepozitory());
-        CinemaData name = new CinemaData(9, "Гоблин", "сериал");
-
-        CinemaData[] actual = manager2.addFilm(name);
+    void shouldFindAll() {
         CinemaData[] expected = {new CinemaData(1, "Бладшот", ",боевик"),
                 new CinemaData(2, "Вперёд", "мультфильм"),
                 new CinemaData(3, "Отель Белград", "комедия"),
@@ -59,6 +56,8 @@ class CinemaManagerTest {
                 new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
                 new CinemaData(7, "Номер один", "комедия"),
                 new CinemaData(9, "Гоблин", "сериал")};
+
+        CinemaData[] actual = repo.findAll();
         assertArrayEquals(expected, actual);
     }
 }
