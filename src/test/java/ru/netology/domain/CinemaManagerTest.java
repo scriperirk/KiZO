@@ -28,10 +28,10 @@ class CinemaManagerTest {
     @Test
     public void addFilm2() {
 
-        CinemaManager manager1 = new CinemaManager();
+        CinemaManager manager = new CinemaManager(5);
         CinemaData name = new CinemaData(9, "Гоблин", "сериал");
 
-        CinemaData[] actual = manager1.addCinema(name);
+        CinemaData[] actual = manager.addCinema(name);
         CinemaData[] expected = {new CinemaData(1, "Бладшот", ",боевик"),
                 new CinemaData(2, "Вперёд", "мультфильм"),
                 new CinemaData(3, "Отель Белград", "комедия"),
