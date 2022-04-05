@@ -7,11 +7,12 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class CinemaManagerTest {
 
-    CinemaManager manager = new CinemaManager();
-    CinemaData name = new CinemaData(9, "Гоблин", "сериал");
-
     @Test
     public void addFilm() {
+
+        CinemaManager manager = new CinemaManager();
+        CinemaData name = new CinemaData(9, "Гоблин", "сериал");
+
         CinemaData[] actual = manager.addCinema(name);
         CinemaData[] expected = {new CinemaData(1, "Бладшот", ",боевик"),
                 new CinemaData(2, "Вперёд", "мультфильм"),
@@ -24,14 +25,21 @@ class CinemaManagerTest {
         assertArrayEquals(expected, actual);
     }
 
-    //@Test
-    //public void testNextOne2() {
-    //    CinemaManager movies1 = new CinemaManager(5);
-    //    movies1.addCinema(CinemaData names);
+    @Test
+    public void addFilm2() {
 
-    //    int expected = 1;
-    //    int actual = movies1.getRadioStationNext();
+        CinemaManager manager1 = new CinemaManager();
+        CinemaData name = new CinemaData(9, "Гоблин", "сериал");
 
-    //    assertEquals(expected, actual);
-    //}
+        CinemaData[] actual = manager1.addCinema(name);
+        CinemaData[] expected = {new CinemaData(1, "Бладшот", ",боевик"),
+                new CinemaData(2, "Вперёд", "мультфильм"),
+                new CinemaData(3, "Отель Белград", "комедия"),
+                new CinemaData(4, "Джентльмены", "боевик"),
+                new CinemaData(5, "Человек-невидимка", "ужасы"),
+                new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
+                new CinemaData(7, "Номер один", "комедия"),
+                new CinemaData(8, "Гоблин", "сериал")};
+        assertArrayEquals(expected, actual);
+    }
 }

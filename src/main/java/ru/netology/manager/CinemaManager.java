@@ -20,22 +20,17 @@ public class CinemaManager {
 
     CinemaData name = new CinemaData(8, "Гоблин", "сериал");
 
-
-    public CinemaManager() {
-        this.quantityCinema = 10;   //записал в память конструктор 1
+    public CinemaManager(int quantityCinema) {
+        this.quantityCinema = quantityCinema;   //записал в память конструктор 1
     }
 
-    public CinemaManager(int quantityCinema) {
-        this.quantityCinema = quantityCinema;   //записал в память конструктор 2
+    public CinemaManager() {
+        this.quantityCinema = 10;   //записал в память конструктор 2
     }
 
     //метод добавления фильма
     public CinemaData[] addCinema(CinemaData name) {
         CinemaData[] tmp = new CinemaData[names.length + 1];
-        //for (int i = 0; i < names.length; i++) {
-        //    tmp[i] = names[i];
-        //}
-        //аналог
         arraycopy(names, 0, tmp, 0, tmp.length - 1);
 
         tmp[tmp.length - 1] = name;
