@@ -5,6 +5,7 @@ import ru.netology.domain.CinemaData;
 import static java.lang.System.arraycopy;
 
 public class CinemaDataRepozitory {
+
     CinemaData[] items = {new CinemaData(1, "Бладшот", ",боевик"),
             new CinemaData(2, "Вперёд", "мультфильм"),
             new CinemaData(3, "Отель Белград", "комедия"),

@@ -21,6 +21,7 @@ public class CinemaManager {
     public CinemaManager(CinemaDataRepozitory repository) {
         this.repo = repository;
     }
+
     CinemaData[] items = {new CinemaData(1, "Бладшот", ",боевик"),
             new CinemaData(2, "Вперёд", "мультфильм"),
             new CinemaData(3, "Отель Белград", "комедия"),
@@ -41,8 +42,8 @@ public class CinemaManager {
         return tmp;
     }
 
-    public void addFilm(CinemaData film) {
-
-        repo.save(film);
+    public CinemaData[] addFilm(CinemaData name) {
+        repo.save(name);
+        return new CinemaData[0];
     }
 }
