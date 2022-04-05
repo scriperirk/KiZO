@@ -10,6 +10,14 @@ import static java.lang.System.arraycopy;
 public class CinemaManager {
     private int quantityCinema = 5; //завел максимум
 
+    public CinemaManager() {
+        this.quantityCinema = 10;   //записал в память конструктор 1
+    }
+
+    public CinemaManager(int quantityCinema) {
+        this.quantityCinema = quantityCinema;   //записал в память конструктор 2
+    }
+
     CinemaData[] names = {new CinemaData(1, "Бладшот", ",боевик"),
             new CinemaData(2, "Вперёд", "мультфильм"),
             new CinemaData(3, "Отель Белград", "комедия"),
@@ -19,14 +27,6 @@ public class CinemaManager {
             new CinemaData(7, "Номер один", "комедия")};         //создал массив
 
     CinemaData name = new CinemaData(8, "Гоблин", "сериал");
-
-    public CinemaManager(int quantityCinema) {
-        this.quantityCinema = quantityCinema;   //записал в память конструктор 1
-    }
-
-    public CinemaManager() {
-        this.quantityCinema = 10;   //записал в память конструктор 2
-    }
 
     //метод добавления фильма
     public CinemaData[] addCinema(CinemaData name) {
