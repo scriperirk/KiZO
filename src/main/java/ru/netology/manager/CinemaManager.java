@@ -6,7 +6,6 @@ import ru.netology.domain.CinemaData;
 import static java.lang.System.arraycopy;
 
 @Data
-//@NoArgsConstructor
 public class CinemaManager {
     private int quantityCinema = 5; //завел максимум
 
