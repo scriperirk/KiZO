@@ -54,8 +54,7 @@ class CinemaManagerTest {
                 new CinemaData(4, "Джентльмены", "боевик"),
                 new CinemaData(5, "Человек-невидимка", "ужасы"),
                 new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
-                new CinemaData(7, "Номер один", "комедия"),
-                new CinemaData(9, "Гоблин", "сериал")};
+                new CinemaData(7, "Номер один", "комедия")};
 
         CinemaData[] actual = repo.findAll();
         assertArrayEquals(expected, actual);
