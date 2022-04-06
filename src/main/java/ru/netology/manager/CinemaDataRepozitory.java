@@ -14,6 +14,16 @@ public class CinemaDataRepozitory {
 
     CinemaData name = new CinemaData(8, "Гоблин", "сериал");
 
+    public void save(CinemaData name) {
+        int length = items.length + 1;
+        CinemaData[] addedFilm = new CinemaData[length];
+        for (int i = 0; i < items.length; i++) {
+            addedFilm[i] = items[i];
+        }
+        int lastIndex = addedFilm.length - 1;
+        addedFilm[lastIndex] = name;
+        items = addedFilm;
+    }
 
     public CinemaData[] findAll() {
         for (int i = 0; i < items.length; i++) {

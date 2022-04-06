@@ -7,7 +7,7 @@ import static java.lang.System.arraycopy;
 
 @Data
 public class CinemaManager {
-    private CinemaDataRepozitory repo;
+    private CinemaDataRepozitory repository;
     private int quantityCinema = 5; //завел максимум
 
     public CinemaManager() {
@@ -19,7 +19,7 @@ public class CinemaManager {
     }
 
     //public CinemaManager(CinemaDataRepozitory repository) {
-    //    this.repo = repository;
+    //    this.repository = repository;
     //}
 
     CinemaData[] items = {new CinemaData(1, "Бладшот", ",боевик"),
@@ -32,6 +32,15 @@ public class CinemaManager {
 
     CinemaData name = new CinemaData(8, "Гоблин", "сериал");
 
+    public void addFilm(CinemaData name) {
+        repository.save(name);
+    }
+
+    public CinemaData[] showAll(){
+        CinemaData[] all = repository.findAll();
+        return all;
+    }
+
     //метод добавления фильма
     public CinemaData[] addCinema(CinemaData name) {
         CinemaData[] tmp = new CinemaData[items.length + 1];
@@ -40,10 +49,5 @@ public class CinemaManager {
         tmp[tmp.length - 1] = name;
         items = tmp;
         return tmp;
-    }
-
-    public CinemaData[] addFilm(CinemaData name) {
-        CinemaData[] all = repo.findAll();
-        return all;
     }
 }
