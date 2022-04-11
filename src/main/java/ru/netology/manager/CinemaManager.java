@@ -18,10 +18,6 @@ public class CinemaManager {
         this.quantityCinema = quantityCinema;   //записал в память конструктор 2
     }
 
-    //public CinemaManager(CinemaDataRepozitory repository) {
-    //    this.repository = repository;
-    //}
-
     CinemaData[] items = {new CinemaData(1, "Бладшот", ",боевик"),
             new CinemaData(2, "Вперёд", "мультфильм"),
             new CinemaData(3, "Отель Белград", "комедия"),
