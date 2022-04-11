@@ -16,13 +16,13 @@ import static org.mockito.Mockito.doReturn;
 @ExtendWith(MockitoExtension.class)
 class CinemaManagerTest {
 
+   CinemaData name = new CinemaData(9, "Гоблин", "сериал");
+
     @Test
     public void addFilm() {
-
         CinemaManager manager = new CinemaManager();
-        CinemaData name = new CinemaData(9, "Гоблин", "сериал");
 
-        CinemaData[] actual = manager.addCinema(name);
+        CinemaData[] actual = manager.addFilm(name);
         CinemaData[] expected = {new CinemaData(1, "Бладшот", ",боевик"),
                 new CinemaData(2, "Вперёд", "мультфильм"),
                 new CinemaData(3, "Отель Белград", "комедия"),
@@ -30,7 +30,7 @@ class CinemaManagerTest {
                 new CinemaData(5, "Человек-невидимка", "ужасы"),
                 new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
                 new CinemaData(7, "Номер один", "комедия"),
-                new CinemaData(9, "Гоблин", "сериал")};
+                new CinemaData(8, "Гоблин", "сериал")};
         assertArrayEquals(expected, actual);
     }
 
@@ -38,17 +38,13 @@ class CinemaManagerTest {
     public void addFilm2() {
 
         CinemaManager manager1 = new CinemaManager(5);
-        CinemaData name = new CinemaData(9, "Гоблин", "сериал");
 
-        CinemaData[] actual = manager1.addCinema(name);
+        CinemaData[] actual = manager1.addFilm(name);
         CinemaData[] expected = {new CinemaData(1, "Бладшот", ",боевик"),
                 new CinemaData(2, "Вперёд", "мультфильм"),
                 new CinemaData(3, "Отель Белград", "комедия"),
                 new CinemaData(4, "Джентльмены", "боевик"),
-                new CinemaData(5, "Человек-невидимка", "ужасы"),
-                new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
-                new CinemaData(7, "Номер один", "комедия"),
-                new CinemaData(9, "Гоблин", "сериал")};
+                new CinemaData(5, "Гоблин", "сериал")};
         assertArrayEquals(expected, actual);
     }
 
