@@ -16,20 +16,20 @@ import static org.mockito.Mockito.doReturn;
 @ExtendWith(MockitoExtension.class)
 class CinemaManagerTest {
 
-   CinemaData name = new CinemaData(9, "Гоблин", "сериал");
+   CinemaData name = new CinemaData(8, "Гоблин", "сериал");
 
     @Test
     public void addFilm() {
         CinemaManager manager = new CinemaManager();
 
         CinemaData[] actual = manager.addFilm(name);
-        CinemaData[] expected = {new CinemaData(1, "Бладшот", ",боевик"),
-                new CinemaData(2, "Вперёд", "мультфильм"),
-                new CinemaData(3, "Отель Белград", "комедия"),
-                new CinemaData(4, "Джентльмены", "боевик"),
-                new CinemaData(5, "Человек-невидимка", "ужасы"),
-                new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
-                new CinemaData(7, "Номер один", "комедия"),
+        CinemaData[] expected = {new CinemaData(0, "Бладшот", ",боевик"),
+                new CinemaData(1, "Вперёд", "мультфильм"),
+                new CinemaData(2, "Отель Белград", "комедия"),
+                new CinemaData(3, "Джентльмены", "боевик"),
+                new CinemaData(4, "Человек-невидимка", "ужасы"),
+                new CinemaData(5, "Троли.Мировой тур", "мультфильм"),
+                new CinemaData(6, "Номер один", "комедия"),
                 new CinemaData(8, "Гоблин", "сериал")};
         assertArrayEquals(expected, actual);
     }
@@ -40,11 +40,11 @@ class CinemaManagerTest {
         CinemaManager manager1 = new CinemaManager(5);
 
         CinemaData[] actual = manager1.addFilm(name);
-        CinemaData[] expected = {new CinemaData(1, "Бладшот", ",боевик"),
-                new CinemaData(2, "Вперёд", "мультфильм"),
-                new CinemaData(3, "Отель Белград", "комедия"),
-                new CinemaData(4, "Джентльмены", "боевик"),
-                new CinemaData(5, "Гоблин", "сериал")};
+        CinemaData[] expected = {new CinemaData(0, "Бладшот", ",боевик"),
+                new CinemaData(1, "Вперёд", "мультфильм"),
+                new CinemaData(2, "Отель Белград", "комедия"),
+                new CinemaData(3, "Джентльмены", "боевик"),
+                new CinemaData(4, "Гоблин", "сериал")};
         assertArrayEquals(expected, actual);
     }
 

@@ -18,15 +18,15 @@ public class CinemaManager {
         this.quantityCinema = quantityCinema;   //записал в память конструктор 2
     }
 
-    CinemaData[] items = {new CinemaData(1, "Бладшот", ",боевик"),
-            new CinemaData(2, "Вперёд", "мультфильм"),
-            new CinemaData(3, "Отель Белград", "комедия"),
-            new CinemaData(4, "Джентльмены", "боевик"),
-            new CinemaData(5, "Человек-невидимка", "ужасы"),
-            new CinemaData(6, "Троли.Мировой тур", "мультфильм"),
-            new CinemaData(7, "Номер один", "комедия")};         //создал массив
+    CinemaData[] items = {new CinemaData(0, "Бладшот", ",боевик"),
+            new CinemaData(1, "Вперёд", "мультфильм"),
+            new CinemaData(2, "Отель Белград", "комедия"),
+            new CinemaData(3, "Джентльмены", "боевик"),
+            new CinemaData(4, "Человек-невидимка", "ужасы"),
+            new CinemaData(5, "Троли.Мировой тур", "мультфильм"),
+            new CinemaData(6, "Номер один", "комедия")};         //создал массив
 
-    CinemaData name = new CinemaData(8, "Гоблин", "сериал");
+    CinemaData name = new CinemaData(7, "Гоблин", "сериал");
 
     public CinemaData[] addFilm(CinemaData name) {
 
@@ -38,6 +38,7 @@ public class CinemaManager {
         int lastIndex = tmp.length - 1;
         tmp[lastIndex] = name;
         items = tmp;
+        System.out.println(items);
         return tmp;
     }
 
