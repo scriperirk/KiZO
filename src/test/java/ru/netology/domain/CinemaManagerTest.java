@@ -31,7 +31,7 @@ class CinemaManagerTest {
 
     @Test
     void showAddedFilms() {
-        CinemaManager manager1 = new CinemaManager();
+        CinemaManager manager1 = new CinemaManager(5);
 
         manager1.addFilm(name);
         CinemaData[] actual = manager1.showAll();

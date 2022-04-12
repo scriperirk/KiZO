@@ -43,7 +43,7 @@ public class CinemaManager {
     }
 
     public CinemaData[] showAll() {
-        for (int i = items.length - 1; i > items.length - (quantityCinema + 1) & i >= 0; i--) {
+        for (int i = items.length - 1; i > items.length - (this.quantityCinema + 1) & i >= 0; i--) {
             System.out.print(items[i]);
         }
         return new CinemaData[0];
