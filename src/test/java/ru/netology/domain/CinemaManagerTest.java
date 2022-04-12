@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @ExtendWith(MockitoExtension.class)
 class CinemaManagerTest {
 
-   CinemaData name = new CinemaData(7, "Гоблин", "сериал");
+    CinemaData name = new CinemaData(7, "Гоблин", "сериал");
 
     @Test
     public void addFilm() {

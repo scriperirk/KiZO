@@ -38,13 +38,12 @@ public class CinemaManager {
         int lastIndex = tmp.length - 1;
         tmp[lastIndex] = name;
         items = tmp;
-        System.out.println(items);
         return tmp;
     }
 
     public CinemaData[] showAll() {
         for (int i = items.length - 1; i > items.length - (this.quantityCinema + 1) & i >= 0; i--) {
-            System.out.print(items[i]);
+
         }
         return new CinemaData[0];
     }
