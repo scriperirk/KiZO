@@ -9,6 +9,7 @@ import static java.lang.System.arraycopy;
 public class CinemaManager {
 
     private int quantityCinema = 5; //завел максимум
+    private CinemaData[] items = new CinemaData[0];
 
     public CinemaManager() {
         this.quantityCinema = 10;   //записал в память конструктор 1
@@ -31,10 +32,22 @@ public class CinemaManager {
         return tmp;
     }
 
-    public CinemaData[] showAll(CinemaData[] items) {
-        for (int i = items.length - 1; i > items.length - (this.quantityCinema + 1) & i >= 0; i--) {
+    public CinemaData[] findLast(CinemaData[] items, CinemaData name) {
+
+        int resultLength;
+
+        if (items.length > quantityCinema) {
+            resultLength = quantityCinema;
+        } else resultLength = items.length;
+
+        CinemaData[] result = new CinemaData[resultLength];
+
+        for (int i = 0; i < result.length; i++) {
+            int index = items.length - i - 1;
+            result[i] = items[index];
         }
-        return new CinemaData[0];
+        return result;
+
     }
 
 }
