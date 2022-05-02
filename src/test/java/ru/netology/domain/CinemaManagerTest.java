@@ -48,7 +48,7 @@ class CinemaManagerTest {
                 new CinemaData(6, "Номер один", "комедия"),
                 new CinemaData(7, "Гоблин", "сериал")};
 
-        CinemaData[] actual = manager1.findLast(items, name);
+        CinemaData[] actual = manager1.findLast();
         CinemaData[] expected = {new CinemaData(0, "Бладшот", ",боевик"),
                 new CinemaData(1, "Вперёд", "мультфильм"),
                 new CinemaData(2, "Отель Белград", "комедия"),
