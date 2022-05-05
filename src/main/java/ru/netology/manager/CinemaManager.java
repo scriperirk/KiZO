@@ -32,13 +32,14 @@ public class CinemaManager {
         return tmp;
     }
 
-    public CinemaData[] findLast() {
+    public CinemaData[] findLast(CinemaData[] items) {
 
         int resultLength;
 
         if (items.length > quantityCinema) {
             resultLength = quantityCinema;
-        } else {resultLength = items.length;
+        } else {
+            resultLength = items.length;
         }
 
         CinemaData[] result = new CinemaData[resultLength];
